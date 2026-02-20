@@ -1,27 +1,37 @@
   
-  <form>
+  <form [formGroup]="form" (ngSubmit)="sub()">
   
   <mat-form-field appearance="fill">
     <mat-label>cin</mat-label>
-    <input matInput placeholder="cin">
+    <input matInput placeholder="cin" formControlName="cin">
   
   </mat-form-field>
 <br>
 <br>
     <mat-form-field appearance="fill">
     <mat-label>name</mat-label>
-    <input matInput placeholder="name">
+    <input matInput placeholder="name" formControlName="name">
   
   </mat-form-field>
 <br>
 <br>
     <mat-form-field appearance="fill">
     <mat-label>type</mat-label>
-    <input matInput placeholder="type">
+    <input matInput placeholder="type" formControlName="type">
   
   </mat-form-field>
+  <br>
+    <mat-form-field appearance="fill">
+    <mat-label>CreatedDate</mat-label>
+    <input matInput placeholder="CreatedDate" formControlName="createdDate">
 
+  </mat-form-field>
+<section>
+  <div class="example-button-row">
+    <button type ="submit">Submit</button>
 
+  </div>
+</section>
 
 
 </form>

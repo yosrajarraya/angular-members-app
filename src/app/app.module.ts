@@ -10,12 +10,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { MemberFormComponent } from './member-form/member-form.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogModule, MatDialogRef, MatDialogTitle } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     MemberComponent,
-    MemberFormComponent
+    MemberFormComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,14 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule 
+    MatInputModule ,
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    MatDialogModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

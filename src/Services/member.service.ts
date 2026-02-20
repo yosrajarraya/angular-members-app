@@ -18,7 +18,22 @@ export class MemberService {
     return this.http.get<Member[]>('http://localhost:3000/members');
 
 }
+
+AddMember(member: Member):Observable<void> {
+  //code pour envoyer une requete HTTP POST vers le backend pour ajouter un membre
+  return this.http.post<void>('http://localhost:3000/members', member);
    }
+   deleteMember(id: number): Observable<void> {
+    //code pour envoyer une requete HTTP DELETE vers le backend pour supprimer un membre
+    return this.http.delete<void>(`http://localhost:3000/members/${id}`);
+  }
 
 //implementation des methodes CRUD qui genereent des requetes HTTP vers le backend
+getMemberById(id: string): Observable<Member> {
+  return this.http.get<Member>(`http://localhost:3000/members/${id}`);
+}
 
+updateMember(id: string, member: Member): Observable<void> {
+  return this.http.put<void>(`http://localhost:3000/members/${id}`, member);
+}
+}

@@ -15,6 +15,11 @@ const routes: Routes = [
   pathMatch: 'full',
   component: MemberComponent
   },
+  {// : c'est définie id dynamique qui peut prendre n'importe quelle valeur, on peut acceder a cette valeur dans le composant avec ActivatedRoute
+    path: 'edit/:id',
+    pathMatch: 'full',
+    component: MemberFormComponent
+  },
   {
     path: '**',
     component: MemberComponent
